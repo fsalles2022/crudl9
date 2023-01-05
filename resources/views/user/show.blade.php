@@ -12,7 +12,7 @@
 
     <div class="container">
 
-        <div class="h1 text-center mb-5 mt-5">Tabela de Usuários</div>
+        <div class="h1 text-center mb-5 mt-5">Tabela ID de Usuários</div>
 
         <table class="table">
             <thead>
@@ -20,22 +20,20 @@
                     <th scope="col">#</th>
                     <th scope="col">Nome</th>
                     <th scope="col">Email</th>
-                    <th scope="col">Botão</th>
 
                 </tr>
             </thead>
             <tbody>
-                @foreach($users as $user)
+             
 
                 <tr>
-                    <th scope="row">{{ $user->id }}</th>
+                    <th scope="row">{{$user->id }}</th>
                     <td>{{$user->name }}</td>
-                    <td>{{ $user->email }} </td>
-                    <td> <a type="button" href="{{route('user.show', $user->id)}}" class="btn btn-success">Ver Id </a></td>
+                    <td>{{$user->email }} </td>
 
 
                 </tr>
-                @endforeach
+                
             </tbody>
         </table>
 
