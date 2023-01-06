@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    
+
     public function index()
     {
 
@@ -18,13 +18,13 @@ class HomeController extends Controller
         ]);
     }
 
-  
+
     public function create()
     {
         //
     }
 
-    
+
 
     public function store(Request $request)
     {
@@ -34,22 +34,28 @@ class HomeController extends Controller
 
     public function show($id)
     {
-        //
+        $user = User::find($id);
+        return view('user.show', [
+            'user' => $user
+        ]);
     }
 
 
     public function edit($id)
     {
-        //
+        $user = User::find($id);
+        return view('user.edit', [
+            'user' => $user
+        ]);
     }
 
-    
+
     public function update(Request $request, $id)
     {
         //
     }
 
-   
+
     public function destroy($id)
     {
         //

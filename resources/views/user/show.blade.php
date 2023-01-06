@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>CrudL9</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 </head>
 
@@ -12,7 +12,7 @@
 
     <div class="container">
 
-        <div class="h1 text-center mb-5 mt-5">Tabela de Usuários</div>
+        <div class="h1 text-center mb-5 mt-5">Mostrar Usuários</div>
 
         <table class="table">
             <thead>
@@ -20,26 +20,20 @@
                     <th scope="col">#</th>
                     <th scope="col">Nome</th>
                     <th scope="col">Email</th>
-                    <th scope="col">Id</th>
-                    <th scope="col">Editar</th>
-
 
                 </tr>
             </thead>
             <tbody>
-                @foreach($users as $user)
+
 
                 <tr>
-                    <th scope="row">{{ $user->id }}</th>
+                    <th scope="row">{{$user->id }}</th>
                     <td>{{$user->name }}</td>
-                    <td>{{ $user->email }} </td>
-                    <td> <a type="button" href="{{route('user.show', $user->id)}}" class="btn btn-success">Ver Id </a></td>
-                    <td> <a type="button" href="{{route('user.edit', $user->id)}}" class="btn btn-warning">Editar Pelo Id </a></td>
-
+                    <td>{{$user->email }} </td>
 
 
                 </tr>
-                @endforeach
+
             </tbody>
         </table>
 
