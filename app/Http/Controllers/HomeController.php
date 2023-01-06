@@ -56,6 +56,14 @@ class HomeController extends Controller
         // dd($request->except(['_token', '_method']));
         // dd($request->only(['_token', '_method']));
         //dd($request->only(['name', 'email']), $id);
+        $data = $request->only(['name', 'email']);
+        $user = User::find($id);
+        $user->update($data);
+        return redirect()->back();
+        
+   
+       
+                
     }
 
 

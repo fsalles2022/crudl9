@@ -16,16 +16,15 @@
 
         <form method="post" action="{{route('user.update', $user->id)}}">
             @csrf
-            @method('put');
+            @method('put')
 
             <div class="mb-3">
                 <label for="name" class="form-label">Nome</label>
-                <input type="text" value="{{$user->name}}" class="form-control" id="name" name="na">
+                <input type="text" value="{{$user->name}}" class="form-control" id="name" name="name">
             </div>
             <div class="mb-3">
                 <label for="Email1" class="form-label">Email</label>
                 <input type="email" value="{{$user->email}}" class="form-control" id="Email" name="email" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
             </div>
 
 
