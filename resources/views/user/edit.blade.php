@@ -14,23 +14,22 @@
 
         <div class="h1 text-center mb-5 mt-5">Editar Usuários</div>
 
-        <form>
+        <form method="post" action="{{route('user.update', $user->id)}}">
+            @csrf
+            @method('put');
 
             <div class="mb-3">
                 <label for="name" class="form-label">Nome</label>
-                <input type="text" value="{{$user->name}}" class="form-control" id="name">
+                <input type="text" value="{{$user->name}}" class="form-control" id="name" name="na">
             </div>
             <div class="mb-3">
                 <label for="Email1" class="form-label">Email</label>
-                <input type="email" value="{{$user->email}}" class="form-control" id="Email" aria-describedby="emailHelp">
+                <input type="email" value="{{$user->email}}" class="form-control" id="Email" name="email" aria-describedby="emailHelp">
                 <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
             </div>
 
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+
+            <button type="submit" class="btn btn-primary">Atualizar dados</button>
         </form>
 
     </div>
