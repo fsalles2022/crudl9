@@ -52,7 +52,10 @@ class HomeController extends Controller
 
     public function update(Request $request, $id)
     {
-      //
+        // dd($request->all());
+        // dd($request->except(['_token', '_method']));
+        // dd($request->only(['_token', '_method']));
+        //dd($request->only(['name', 'email']), $id);
     }
 
 
