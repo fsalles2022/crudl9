@@ -13,6 +13,7 @@
     <div class="container">
 
         <div class="h1 text-center mb-5 mt-5">Tabela de Usuários</div>
+        <a type="button" href="{{route('user.create')}}" class="btn btn-info">Criar</a>
 
         <table class="table">
             <thead>
