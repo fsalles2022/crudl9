@@ -23,7 +23,7 @@
                     <th scope="col">Email</th>
                     <th scope="col">Id</th>
                     <th scope="col">Editar</th>
-                    <th scope="col">Deletar</th>
+                    <th scope="col">Deletarr</th>
                 </tr>
             </thead>
             <tbody>
