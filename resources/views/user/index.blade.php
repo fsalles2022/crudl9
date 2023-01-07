@@ -34,7 +34,7 @@
                     <td>{{ $user->email }} </td>
                     <td> <a type="button" href="{{route('user.show', $user->id)}}" class="btn btn-success">Ver Id </a></td>
                     <td> <a type="button" href="{{route('user.edit', $user->id)}}" class="btn btn-warning">Editar</a></td>
-                    <td> <a type="button" href="{{route('user.delete', $user->id)}}" class="btn btn-warning">Deletar</a></td>
+                    <td> <a type="button" href="{{route('user.destroy', $user->id)}}" class="btn btn-warning">Deletar</a></td>
 
 
 
