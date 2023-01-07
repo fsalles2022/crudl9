@@ -24,7 +24,11 @@
                 </tr>
             </thead>
             <tbody>
+<<<<<<< HEAD
 
+=======
+             
+>>>>>>> 07ff8c578b720f0460ce846da9d64e639ebf039f
 
                 <tr>
                     <th scope="row">{{$user->id }}</th>
@@ -33,7 +37,11 @@
 
 
                 </tr>
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> 07ff8c578b720f0460ce846da9d64e639ebf039f
             </tbody>
         </table>
 

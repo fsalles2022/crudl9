@@ -14,6 +14,7 @@
 
         <div class="h1 text-center mb-5 mt-5">Editar Usuários</div>
 
+<<<<<<< HEAD
         <form method="post" action="{{route('user.update', $user->id)}}">
             @csrf
             @method('put')
@@ -30,6 +31,30 @@
 
             <button type="submit" class="btn btn-primary">Atualizar dados</button>
         </form>
+=======
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Email</th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+
+                <tr>
+                    <th scope="row">{{$user->id }}</th>
+                    <td>{{$user->name }}</td>
+                    <td>{{$user->email }} </td>
+
+
+                </tr>
+
+            </tbody>
+        </table>
+>>>>>>> 07ff8c578b720f0460ce846da9d64e639ebf039f
 
     </div>
 

@@ -23,7 +23,12 @@
                     <th scope="col">Email</th>
                     <th scope="col">Id</th>
                     <th scope="col">Editar</th>
+<<<<<<< HEAD
                     <th scope="col">Deletar</th>
+=======
+
+
+>>>>>>> 07ff8c578b720f0460ce846da9d64e639ebf039f
                 </tr>
             </thead>
             <tbody>
@@ -34,6 +39,7 @@
                     <td>{{$user->name }}</td>
                     <td>{{ $user->email }} </td>
                     <td> <a type="button" href="{{route('user.show', $user->id)}}" class="btn btn-success">Ver Id </a></td>
+<<<<<<< HEAD
                     <td> <a type="button" href="{{route('user.edit', $user->id)}}" class="btn btn-warning">Editar</a></td>
 
                     <td>
@@ -44,6 +50,9 @@
                         </form>
 
                     </td>
+=======
+                    <td> <a type="button" href="{{route('user.edit', $user->id)}}" class="btn btn-warning">Editar Pelo Id </a></td>
+>>>>>>> 07ff8c578b720f0460ce846da9d64e639ebf039f
 
 
 

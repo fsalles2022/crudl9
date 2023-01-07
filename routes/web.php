@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+<<<<<<< HEAD
 
 
 Route::get('/usuarios', [HomeController::class, 'index'])->name('user.index');
@@ -24,6 +25,11 @@ Route::put('/usuario/update/{id}', [HomeController::class, 'update'])->name('use
 Route::delete('/usuario/delete/{id}', [HomeController::class, 'destroy'])->name('user.destroy');
 Route::get('/usuarios/adicionar', [HomeController::class, 'create'])->name('user.create');
 Route::post('/usuarios/adicionar', [HomeController::class, 'store'])->name('user.store');
+=======
+Route::get('/usuarios',[HomeController::class, 'index'])->name('index');
+Route::get('/usuario/{id}', [HomeController::class, 'show'])->name('user.show');
+Route::get('/usuario/edit/{id}', [HomeController::class, 'edit'])->name('user.edit');
+>>>>>>> 07ff8c578b720f0460ce846da9d64e639ebf039f
 
  
 
