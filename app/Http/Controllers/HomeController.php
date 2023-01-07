@@ -29,7 +29,15 @@ class HomeController extends Controller
 
     public function store(Request $request)
     {
-        //
+        //dd("cheguei");
+        $data = $request->only(['name', 'email']);
+        $data['password'] = bcrypt('password');
+
+        User::create($data);
+
+
+        return redirect()->route('user.index');
+   
     }
 
 
@@ -60,7 +68,7 @@ class HomeController extends Controller
         $data = $request->only(['name', 'email']);
         $user = User::find($id);
         $user->update($data);
-        return redirect()->back();
+        return redirect()->route('user.index');
         
    
        
