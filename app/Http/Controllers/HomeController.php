@@ -70,6 +70,11 @@ class HomeController extends Controller
     public function destroy($id)
     {
         // softDelete
-        
+        //dd($id);
+        $user = User::find($id);
+        $user->delete();
+        return redirect()->back();
+
+
     }
 }
