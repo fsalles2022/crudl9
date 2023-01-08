@@ -5,7 +5,7 @@
 Me chamo Fábio, sou formado em Gestão da Tecnologia da Informação e Programador PHP/Laravel.</br>
 Este é um CRUD muito básico, mas que traz a lógica e o entendimento por traz do ecosistema do Laravel. Este CRUD não tem nenhum tipo de relacionamneto e nehum tipo de</br> verificação de dados(até o momento 07/01/2023).</br>
 Porém, é de muita valia para entendimento básico dos Verbos HTTP( Get, Put, Delete e Post) e como a regra de negocio troca informações através das Url's( Sei que não é boa prática, mas como disse:'Este é um CRUD muito básico').</br>
-Se voçe tiver algum conhecimento com Laravel vai entender facilmente o que está acontecendo em cada arquivo.</br>
+Se você tiver algum conhecimento com Laravel vai entender facilmente o que está acontecendo em cada arquivo.</br>
 
 Vamos lá...</br>
 
@@ -43,7 +43,8 @@ http://localhost:8000/usuarios/adicionar</br>
 Arquivos criados até o momento:</br>
 
 Controlller</br>
-*App\htttp\Controllers\HomeController</br>
+*App\htttp\Controllers\HomeController</br
+Aqui foi criada toda a regra de negócio, as funções e os metodos.</br>
 
 Views</br>
 *\Resourses\views\user{</br>
@@ -53,9 +54,10 @@ Views</br>
     show.blade.php</br>
     update.blade</br>
     }</br>
+    Aqui foram criadas as páginas do pprojeto.</br>
 
 Routes   </br>
-*\App\routes\web{</br>
+*\App\routes\web{ </br>
 Route::get('/usuarios', [HomeController::class, 'index'])->name('user.index');</br>
 Route::get('/usuario/{id}', [HomeController::class, 'show'])->name('user.show');</br>
 Route::get('/usuario/edit/{id}', [HomeController::class, 'edit'])->name('user.edit');</br>
@@ -64,15 +66,18 @@ Route::delete('/usuario/delete/{id}', [HomeController::class, 'destroy'])->name(
 Route::get('/usuarios/adicionar', [HomeController::class, 'create'])->name('user.create');</br>
 Route::post('/usuarios/adicionar', [HomeController::class, 'store'])->name('user.store');</br>
 
-    }</br>
+Aqui foram criadas as rotasdas Urls.</br> 
+
+    }
 
 Seeders</br>
 *\App\database\seeders{</br>
 \App\Models\User::factory(10)->create();</br>
+Aqui foram criados os dados fakes do banco de dados.</br>
  }</br>
 
 
-- 🤝 Este 
+- 🤝 Apesar de tão pouco espero ter ajudado de alguma forma.
 
 ![YOUR github stats](https://github-readme-stats.vercel.app/api?username=fsalles2022)</br>
 
