@@ -13,6 +13,7 @@ Route::put('/usuario/update/{id}', [HomeController::class, 'update'])->name('use
 Route::delete('/usuario/delete/{id}', [HomeController::class, 'destroy'])->name('user.destroy');
 Route::get('/usuarios/adicionar', [HomeController::class, 'create'])->name('user.create');
 Route::post('/usuarios/adicionar', [HomeController::class, 'store'])->name('user.store');
+
  
 
 

@@ -30,7 +30,10 @@
 
             <button type="submit" class="btn btn-primary">Atualizar dados</button>
         </form>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 39eec1a4aa6da5a904fb6a586735eb311eca2b2f
 
     </div>
 

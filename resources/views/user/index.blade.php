@@ -25,7 +25,11 @@
                     <th scope="col">Editar</th>
                     <th scope="col">Deletar</th>
 
+<<<<<<< HEAD
 
+=======
+                  
+>>>>>>> 39eec1a4aa6da5a904fb6a586735eb311eca2b2f
                 </tr>
             </thead>
             <tbody>
@@ -46,7 +50,10 @@
                         </form>
 
                     </td>
+<<<<<<< HEAD
                    
+=======
+>>>>>>> 39eec1a4aa6da5a904fb6a586735eb311eca2b2f
 
 
 
