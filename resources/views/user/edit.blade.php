@@ -14,28 +14,22 @@
 
         <div class="h1 text-center mb-5 mt-5">Editar Usuários</div>
 
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Email</th>
+        <form method="post" action="{{route('user.update', $user->id)}}">
+            @csrf
+            @method('put')
 
-                </tr>
-            </thead>
-            <tbody>
-
-
-                <tr>
-                    <th scope="row">{{$user->id }}</th>
-                    <td>{{$user->name }}</td>
-                    <td>{{$user->email }} </td>
+            <div class="mb-3">
+                <label for="name" class="form-label">Nome</label>
+                <input type="text" value="{{$user->name}}" class="form-control" id="name" name="name">
+            </div>
+            <div class="mb-3">
+                <label for="Email1" class="form-label">Email</label>
+                <input type="email" value="{{$user->email}}" class="form-control" id="Email" name="email" aria-describedby="emailHelp">
+            </div>
 
 
-                </tr>
-
-            </tbody>
-        </table>
+            <button type="submit" class="btn btn-primary">Atualizar dados</button>
+        </form>
 
     </div>
 

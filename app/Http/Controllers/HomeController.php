@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    
+
     public function index()
     {
 
@@ -18,17 +18,26 @@ class HomeController extends Controller
         ]);
     }
 
-  
+
     public function create()
     {
-        //
+        return view('user.create');
+
     }
 
-    
+
 
     public function store(Request $request)
     {
-        //
+        //dd("cheguei");
+        $data = $request->only(['name', 'email']);
+        $data['password'] = bcrypt('password');
+
+        User::create($data);
+
+
+        return redirect()->route('user.index');
+   
     }
 
 
@@ -49,15 +58,32 @@ class HomeController extends Controller
         ]);
     }
 
-    
+
     public function update(Request $request, $id)
     {
-        //
+        // dd($request->all());
+        // dd($request->except(['_token', '_method']));
+        // dd($request->only(['_token', '_method']));
+        //dd($request->only(['name', 'email']), $id);
+        $data = $request->only(['name', 'email']);
+        $user = User::find($id);
+        $user->update($data);
+        return redirect()->route('user.index');
+        
+   
+       
+                
     }
 
-   
+
     public function destroy($id)
     {
-        //
+        // softDelete
+        //dd($id);
+        $user = User::find($id);
+        $user->delete();
+        return redirect()->back();
+
+
     }
 }

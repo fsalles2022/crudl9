@@ -13,6 +13,7 @@
     <div class="container">
 
         <div class="h1 text-center mb-5 mt-5">Tabela de Usuários</div>
+        <a type="button" href="{{route('user.create')}}" class="btn btn-info">Criar</a>
 
         <table class="table">
             <thead>
@@ -22,8 +23,9 @@
                     <th scope="col">Email</th>
                     <th scope="col">Id</th>
                     <th scope="col">Editar</th>
+                    <th scope="col">Deletar</th>
 
-
+                  
                 </tr>
             </thead>
             <tbody>
@@ -34,7 +36,16 @@
                     <td>{{$user->name }}</td>
                     <td>{{ $user->email }} </td>
                     <td> <a type="button" href="{{route('user.show', $user->id)}}" class="btn btn-success">Ver Id </a></td>
-                    <td> <a type="button" href="{{route('user.edit', $user->id)}}" class="btn btn-warning">Editar Pelo Id </a></td>
+                    <td> <a type="button" href="{{route('user.edit', $user->id)}}" class="btn btn-warning">Editar</a></td>
+
+                    <td>
+                        <form method="post" action="{{route('user.destroy', $user->id)}}" method="post">
+                            @method('delete')
+                            @csrf
+                            <button type="submit" class="btn btn-danger">Deletar</button>
+                        </form>
+
+                    </td>
 
 
 
